@@ -14,17 +14,117 @@
 
 <body>
 
-    <section class="part1">
-        <div class="part1__container">
-            <div class="part1__task1 task1">
-                <div class="task1__square" id="task1__square"></div>
-                <button class="task1__button button">
-                    Hide
+<section class="part1">
+    <div class="part1__wrapper">
+        <div class="part1__task1 task1 task">
+            <h2 class="part1__task-title">
+                Task 1
+            </h2>
+            <div class="black-square" id="task1__square"></div>
+            <div class="task1__buttons">
+                <button type="button"  class="task1__button button" onclick="hideCSS()">
+                    Hide with CSS (display: none)
+                </button>
+                <button type="button"  class="task1__button button" onclick="hideJs()">
+                    Hide with JS
+                </button>
+                <button type="button"  class="task1__button button" onclick="hideCssAndJs()">
+                    Hide with CSS+JS (class hidden)
                 </button>
             </div>
-
         </div>
-    </section>
+
+
+        <div class="part1__task2 task2 task">
+            <h2 class="part1__task-title">
+                Task 2
+            </h2>
+            <div class="black-square" id="task2__square"></div>
+            <button type="button"  class="task2__button button" onclick="toggleVisibilityJs()">
+                Hide/show with CSS and Js
+            </button>
+        </div>
+
+        <div class="part1__task3 task3 task">
+            <h2 class="part1__task-title">
+                Task 3
+            </h2>
+            <div class="tack3__squares">
+                <div class="task3__square black-square"></div>
+                <div class="task3__square black-square"></div>
+                <div class="task3__square black-square"></div>
+                <div class="task3__square black-square"></div>
+                <div class="task3__square black-square"></div>
+            </div>
+            <button type="button" class="task3__button button" id="task3__button">
+                Hide/Show
+            </button>
+        </div>
+
+        <div class="part1__task4 task4 task">
+            <h2 class="part1__task-title">
+                Task 4
+            </h2>
+            <label for="task4__selector-field">Enter CSS selector to hide/show elements:</label>
+            <input type="text" name="task4__selector-field" id="task4__selector-field" placeholder="h2">
+            <button type="button" class="task4__button button" id="task4__button">Hide/Show elements</button>
+        </div>
+
+        <div class="part1__task5 task5 task">
+            <h2 class="part1__task-title">
+                Task 5
+            </h2>
+            <div class="task5__square" id="task5__square">
+            </div>
+        </div>
+
+        <div class="part1__task6 task6 task">
+            <h2 class="part1__task-title">
+                Task 6
+            </h2>
+            <div class="task6__square" id="task6__square">
+            </div>
+            <button type="button" class="task6__button button" id="task6__button" onmouseover="showTask6()" onmouseout="hideTask6()">Show red square</button>
+        </div>
+
+        <div class="part1__task7 task7 task">
+            <h2 class="part1__task-title">
+                Task 7
+            </h2>
+            <div class="task7__input-block">
+                <input type="text" placeholder="enter text" id="task7__field">
+                <div class="task7__rectangle" id="task7__rectangle">
+                </div>
+            </div>
+        </div>
+
+        <div class="part1__task8 task8 task" id="task8">
+            <h2 class="part1__task-title">
+                Task 8
+            </h2>
+            <div class="task8__input-block">
+                <input type="text" id="task8__field" size="40" placeholder="enter URL">
+                <button type="button" class="task8__button button" id="task8__button">Show image</button>
+            </div>
+            <div class="task8__images" id="task8__images"></div>
+        </div>
+
+        <div class="part1__task9 task9 task">
+            <h2 class="part1__task-title">
+                Task 9
+            </h2>
+            <div class="task9__input-block">
+                <textarea name="task9__field" id="task9__field" cols="50" rows="5" placeholder="enter URLs"></textarea>
+                <button type="button" class="task9__button button" id="task9__button">Show images</button>
+            </div>
+            <div class="task9__images" id="task9__images"></div>
+        </div>
+
+    </div>
+</section>
+
+
+<script src="js/main.js"></script>
 
 </body>
 

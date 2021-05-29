@@ -1,0 +1,191 @@
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.part1__wrapper {
+    max-width: 1200px;
+    padding: 0 50px;
+    margin: 0 auto;
+}
+
+.part1__task-title {
+    font-size: 26px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0 0 10px;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.button {
+    width: 200px;
+    height: 50px;
+    background-color: #008000;
+    color: #ffffff;
+}
+
+.task {
+    padding: 30px 0;
+    border-top: 5px dashed #008000;
+}
+
+.black-square {
+    width: 100px;
+    height: 100px;
+    background-color: #000000;
+}
+
+/* =============== Task 1 =============== */
+
+#task1__square {
+    margin: 0 auto;
+}
+
+.task1__buttons {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.task1__button {
+    margin: 0 5px;
+}
+
+/* =============== Task 2 =============== */
+
+.task2__button {
+    display: block;
+    margin: 10px auto 0;
+}
+
+#task2__square {
+    margin: 0 auto;
+}
+
+/* =============== Task 3 =============== */
+
+.tack3__squares {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 0 10px;
+}
+
+.task3__square {
+    margin: 5px;
+    flex: 0 0 auto;
+}
+
+.task3__button {
+    display: block;
+    margin: 0 auto;
+}
+
+/* =============== Task 4 =============== */
+
+.part1__task4 {
+    text-align: center;
+}
+
+.task4__button {
+    display: block;
+    margin: 10px auto;
+}
+
+/* =============== Task 5 =============== */
+
+.task5__square {
+    background-color: #ffff00;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+/* =============== Task 6 =============== */
+
+.task6__square {
+    background-color: #ff0000;
+    height: 50px;
+    width: 50px;
+    opacity: 0;
+    margin: 0 auto 10px;
+}
+
+.task6__button {
+    display: block;
+    margin: 0 auto;
+}
+
+/* =============== Task 7 =============== */
+
+.task7__input-block {
+    display: flex;
+    justify-content: center;
+}
+
+.task7__rectangle {
+    width: 50px;
+    height: 20px;
+    background-color: #008000;
+    margin-left: 10px;
+    display: none;
+}
+
+/* =============== Task 8 =============== */
+
+.task8__input-block {
+    margin-bottom: 10px;
+}
+
+#task8__field {
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.task8__button {
+    display: block;
+    margin: 0 auto;
+}
+
+.task8__images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.task8__images img {
+    padding: 5px;
+    display: block;
+}
+
+/* =============== Task 9 =============== */
+
+.task9__input-block {
+    margin-bottom: 10px;
+}
+
+#task9__field {
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.task9__button {
+    display: block;
+    margin: 0 auto;
+}
+
+.task9__images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.task9__images img {
+    padding: 5px;
+    display: block;
+}
