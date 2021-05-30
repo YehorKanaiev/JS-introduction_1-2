@@ -40,6 +40,10 @@ body {
 
 /* =============== Task 1 =============== */
 
+.task1 {
+    border-top: none;
+}
+
 #task1__square {
     margin: 0 auto;
 }
@@ -188,4 +192,22 @@ body {
 .task9__images img {
     padding: 5px;
     display: block;
+}
+
+/* =============== Task 10,11,12 =============== */
+
+.part1__nav {
+    box-sizing: border-box;
+    padding: 15px;
+    width: 300px;
+    height: 100px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #008000;
+    color: #ffffff;
+}
+
+.part1__nav > p {
+    text-align: center;
 }

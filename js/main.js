@@ -116,3 +116,30 @@ function showImages() {
         document.getElementById("task9__images").appendChild(image);
     }
 }
+
+/* ===== Task 10 ===== */
+
+document.body.addEventListener("mousemove",changeCoordinates)
+
+function  changeCoordinates(event) {
+    let label = document.getElementById("nav__coordinates");
+    label.innerHTML = `Cursor coordinates: X:${event.pageX}, Y:${event.pageY}.`;
+}
+
+/* ===== Task 11,12 ===== */
+
+window.addEventListener('load', getUserInfo);
+
+function getUserInfo(event) {
+    if (window.navigator) {
+        // get language
+        let lang = document.getElementById("nav__language");
+        lang.innerHTML = "lang: " + navigator.language.slice(0,2);
+
+        //get location
+        navigator.geolocation.getCurrentPosition((position => {
+            let location = document.getElementById("nav__location");
+            location.innerHTML = `Ш: ${position.coords.latitude}, Д: ${position.coords.longitude}`
+        }));
+    }
+}
