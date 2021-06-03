@@ -143,3 +143,56 @@ function getUserInfo(event) {
         }));
     }
 }
+
+/* ===== Task 13 ===== */
+
+/* Local Storage */
+
+let localInput = document.getElementById("task13__input-to-local-storage");
+localInput.contentEditable = "true";
+if (localStorage.getItem("task13-input")) {
+    localInput.innerHTML = localStorage.getItem("task13-input");
+}
+localInput.addEventListener("input", addToLocal)
+
+function addToLocal() {
+    localStorage.setItem("task13-input", localInput.innerHTML);
+}
+
+/* Cookie */
+
+let cookieInput = document.getElementById("task13__input-to-cookie");
+cookieInput.contentEditable = "true";
+
+getDataFromCookie();
+function getDataFromCookie() {
+    let cookie = document.cookie;
+    cookie = cookie.split(";");
+    for (let entry of cookie) {
+        let entryCookie = entry.split("=");
+        if (entryCookie[0] === "task13-input") {
+            cookieInput = entryCookie[1];
+            break;
+        }
+    }
+}
+
+cookieInput.addEventListener("input", addToCookie);
+function addToCookie() {
+    document.cookie = "task13-input=" + cookieInput.innerHTML;
+}
+
+/* Session Storage */
+
+let sessionInput = document.getElementById("task13__input-to-session-storage");
+sessionInput.contentEditable = "true";
+if (sessionStorage.getItem("task13-input")) {
+    sessionInput.innerHTML = sessionStorage.getItem("task13-input");
+}
+sessionInput.addEventListener("input", addToSession);
+
+function addToSession() {
+    sessionStorage.setItem("task13-input",sessionInput.innerHTML);
+}
+
+
