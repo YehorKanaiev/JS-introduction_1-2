@@ -171,7 +171,7 @@ function getDataFromCookie() {
     for (let entry of cookie) {
         let entryCookie = entry.split("=");
         if (entryCookie[0] === "task13-input") {
-            cookieInput = entryCookie[1];
+            cookieInput.innerHTML = entryCookie[1];
             break;
         }
     }
