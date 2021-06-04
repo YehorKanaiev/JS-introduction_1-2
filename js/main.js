@@ -153,7 +153,7 @@ localInput.contentEditable = "true";
 if (localStorage.getItem("task13-input")) {
     localInput.innerHTML = localStorage.getItem("task13-input");
 }
-localInput.addEventListener("input", addToLocal)
+localInput.addEventListener("input", addToLocal);
 
 function addToLocal() {
     localStorage.setItem("task13-input", localInput.innerHTML);
@@ -178,6 +178,7 @@ function getDataFromCookie() {
 }
 
 cookieInput.addEventListener("input", addToCookie);
+
 function addToCookie() {
     document.cookie = "task13-input=" + cookieInput.innerHTML;
 }
@@ -194,5 +195,99 @@ sessionInput.addEventListener("input", addToSession);
 function addToSession() {
     sessionStorage.setItem("task13-input",sessionInput.innerHTML);
 }
+
+/* ===== Task 14 ===== */
+
+let topButton = document.getElementById("topButton")
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > window.innerHeight) {
+        topButton.style.visibility = "visible";
+    } else {
+        topButton.style.visibility = "hidden";
+    }
+});
+
+topButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    window.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+    });
+});
+
+/* ===== Task 15 ===== */
+
+let outsideBlock = document.getElementById("task15__outside");
+let insideBlock = document.getElementById("task15__inside");
+outsideBlock.addEventListener("click", () => {
+    alert("Click on the outside block");
+})
+insideBlock.addEventListener("click", (event) => {
+    alert("Click on the inside block");
+    event.stopPropagation();
+})
+
+/* ===== Task 16 ===== */
+
+let scrollButton = document.getElementById("task16__button");
+scrollButton.addEventListener("click", () => {
+    document.body.style.overflow = "hidden";
+    let greyCover = document.createElement("div");
+    greyCover.setAttribute("id","grey-cover");
+    document.body.appendChild(greyCover);
+    greyCover.addEventListener("click", () => {
+        document.body.style.overflow = "visible";
+        greyCover.style.display = "none";
+    })
+})
+
+/* ===== Task 18 ===== */
+
+const task18__button = document.getElementById("task18__button");
+const task18__input = document.getElementById("task18__input");
+const task18__dropArea = document.getElementById('task18__drop-field');
+const task18__status = document.getElementById("task18__input-status");
+const task18__defaultLabel = "no file(s) selected";
+
+task18__status.innerHTML = task18__defaultLabel;
+task18__button.addEventListener("click", () => {
+    task18__input.click();
+})
+
+task18__input.addEventListener("change", changeInnerFiles)
+
+task18__dropArea.addEventListener('dragover', (event) => {
+    event.stopPropagation();
+    event.preventDefault();
+    event.dataTransfer.dropEffect = 'copy';
+    task18__dropArea.style.background = "#00b000";
+});
+
+task18__dropArea.addEventListener('dragleave', () => {
+    task18__dropArea.style.background = "#008000";
+})
+
+task18__dropArea.addEventListener('drop', (event) => {
+    event.stopPropagation();
+    event.preventDefault();
+    task18__input.files = event.dataTransfer.files;
+    changeInnerFiles();
+    task18__dropArea.style.background = "#008000";
+});
+
+function changeInnerFiles() {
+    const fileNameList = Array.prototype.map.call(task18__input.files, (file) => {
+        return file.name;
+    })
+    task18__status.innerHTML = fileNameList.join(", ") || task18__defaultLabel;
+}
+
+
+
+
+
+
 
 

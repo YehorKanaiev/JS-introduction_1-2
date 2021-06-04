@@ -241,3 +241,110 @@ body {
     border: 2px solid #000000;
 }
 
+/* =============== Task 14 =============== */
+
+#topButton {
+    position: fixed;
+    right: 5%;
+    bottom: 10%;
+    display: inline-block;
+    padding: 10px 15px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: green;
+    border-radius: 3px;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+/* =============== Task 15 =============== */
+
+.task15__outside{
+    height: 100px;
+    width: 50%;
+    margin: 0 auto;
+    background-color: #008000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.task15__inside {
+    height: 70%;
+    width: 70%;
+    margin: 0 auto;
+    background-color: #005000;
+}
+
+/* =============== Task 16 =============== */
+
+#task16__button {
+    display: block;
+    width: 200px;
+    height: 50px;
+    margin: 0 auto;
+    background-color: #008000;
+    color: #ffffff;
+}
+
+#grey-cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #555555;
+    opacity: 0.6;
+}
+
+/* =============== Task 17 =============== */
+
+#task17__button {
+    display: block;
+    margin: 0 auto;
+}
+
+/* =============== Task 18 =============== */
+
+.task18__drop-field {
+    width: 50%;
+    height: 200px;
+    margin: 0 auto;
+    background-color: #008000;
+    border: 3px dashed #004000;
+    outline: #008000 solid 5px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.task18__input-description {
+    padding: 40px 0 20px;
+}
+
+.task18__input {
+    display: none;
+}
+
+.task18__button {
+    -webkit-appearance: none;
+    width: 200px;
+    height: 50px;
+    background-color: #003000;
+    color: #ffffff;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.task18__button:active {
+    background-color: #004000;
+    border: 2px solid #002000;
+}
+
+.task18__input-status {
+    padding: 10px 0;
+    width: 70%;
+    margin: 0 auto;
+}
+
