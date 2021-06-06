@@ -348,3 +348,49 @@ body {
     margin: 0 auto;
 }
 
+/* =============== Part 2 =============== */
+
+.part2 {
+    text-align: center;
+}
+
+.part2__title {
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0 0 10px;
+}
+
+.part2__field-title {
+    display: block;
+    font-size: 20px;
+}
+
+#part2__incoming-csv, #part2__incoming-data {
+    width: 75%;
+    height: 200px;
+    display: block;
+    margin: 0 auto;
+    font-size: 14px;
+}
+
+.part2__button {
+    display: inline-block;
+    margin: 10px 0;
+    height: 50px;
+    width: 200px;
+    background-color: #008000;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+#part2__outgoing-data {
+    border: 1px solid #333333;
+    border-radius: 3px;
+    padding: 5px;
+    width: 75%;
+    height: 200px;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 14px;
+}
